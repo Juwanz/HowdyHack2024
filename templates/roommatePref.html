@@ -31,8 +31,9 @@
                 </div>
             </div>
 
+            <!-- Question for gender preference -->
             <div class="form-group">
-                <label for="rating">What gender(s) would you like your roommate to be?</label>
+                <label for="rating">What gender(s) would you like your ideal roommate to be?</label>
                 <div class="rating-options">
                     <label><input type="radio" name="rating" value="1"> Male</label>
                     <label><input type="radio" name="rating" value="2"> Female</label>
@@ -41,18 +42,97 @@
                 </div>
             </div>
 
+            <!-- Question for major using a dropdown -->
             <div class="form-group">
-                <label for="feedback">Additional Feedback:</label>
-                <textarea id="feedback" name="feedback" rows="4" placeholder="Share your feedback"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="subscribe">Would you like to receive updates?</label>
+                <label>What department would you like your ideal roommate to be from?</label>
                 <select id="subscribe" name="subscribe">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="College of Agriculture and Life Sciences">College of Agriculture and Life Sciences</option>
+                    <option value="College of Architecture">College of Architecture</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="College of Education and Human Development">College of Education and Human Development</option>
+                    <option value="College of Engineering">College of Engineering</option>
+                    <option value="College of Geosciences">College of Geosciences</option>
+                    <option value="College of Liberal Arts">College of Liberal Arts</option>
+                    <option value="College of Science">College of Science</option>
+                    <option value="School of Public Health">School of Public Health</option>
+                    <option value="College of Veterinary Medicine and Biomedical Sciences">College of Veterinary Medicine and Biomedical Sciences</option>
                 </select>
             </div>
+
+            <!-- Question for selecting an age using feed back, use min to require it to be positive-->
+            <div class="form-group">
+                <label for="age">What age would you like your ideal roommate to be?</label>
+                <textarea id="age" name="age" rows="1" placeholder="Enter an age!" min="1"></textarea>
+            </div>
+
+            <!-- Question for slider for cleanliness of roommate.-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="cleanliness">How clean would you like your roommate to be?</label>
+                <div class="slider-labels">
+                    <span>Very Messy</span>
+                    <span>Very Clean</span>
+                </div>
+        
+                <!-- Slider input -->
+                <input type="range" id="cleanliness" name="cleanliness" min="1" max="10" value="5" oninput="updateCleanValue(this.value)">
+                
+                <!-- Display the current slider value -->
+                <p>Cleanliness Level: <span id="cleanliness-value">5</span></p>
+            </div>
+
+            <!-- Custom value to update the slider for cleanliness -->
+            <script>
+                function updateCleanValue(value) {
+                    document.getElementById('cleanliness-value').textContent = value;
+                }
+            </script>
+
+            <!-- Question for slider for guest frequency of a roommate-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="guest">How often would your ideal roommate have guests over?</label>
+                <div class="slider-labels">
+                    <span>Never</span>
+                    <span>Very Often</span>
+                </div>
+        
+                <!-- Slider input -->
+                <input type="range" id="guest" name="guest" min="1" max="10" value="5" oninput="updateGuestValue(this.value)">
+                
+                <!-- Display the current slider value -->
+                <p>Guest Frequency: <span id="guest-value">5</span></p>
+            </div>
+            
+            <script>
+                function updateGuestValue(value) {
+                    document.getElementById('guest-value').textContent = value;
+                }
+            </script>
+
+             <!-- Question for roommate loudness-->
+             <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="guest">How loud would your roommate be?</label>
+                <div class="slider-labels">
+                    <span>Keeps to themselves</span>
+                    <span>Partying it up!</span>
+                </div>
+        
+                <!-- Slider input -->
+                <input type="range" id="guest" name="guest" min="1" max="10" value="5" oninput="updateLoudValue(this.value)">
+                
+                <!-- Display the current slider value -->
+                <p>Roommate Loudness: <span id="loud-value">5</span></p>
+            </div>
+            
+            <script>
+                function updateLoudValue(value) {
+                    document.getElementById('loud-value').textContent = value;
+                }
+            </script>
 
             <div class="form-group">
                 <button type="submit" class="submit-button">Submit Survey</button>
