@@ -8,7 +8,7 @@ import random
 fake = Faker('en_US')
 
 # Number of rows to generate
-num_rows = 100  # Adjust as needed
+num_rows = 5100  # Adjust as needed
 
 # Function to generate a name based on gender
 def generate_name_by_gender(gender):
@@ -22,6 +22,18 @@ def generate_email(first_name, last_name):
     # Create email in format: first.last@example.com
     domain = random.choice(['gmail.com', 'tamu.edu'])  # Random domain
     return f"{first_name.lower()}.{last_name.lower()}@{domain}"
+tamu_majors = [
+    'College of Agriculture and Life Sciences',
+    'College of Architecture',
+    'Mays Business School',
+    'College of Education and Human Development',
+    'College of Engineering', 
+    'College of Geosciences',
+    'College of Liberal Arts',
+    'College of Science',
+    'School of Public Health',
+    'College of Veterinary Medicine and Biomedical Sciences'
+]
 
 # Generate fake data
 data = {
@@ -29,7 +41,21 @@ data = {
     'first_name': [],  # This will be filled based on gender
     'last_name': [],   # Last name
     'age': [random.randint(18, 25) for _ in range(num_rows)],  # Age between 18 and 25
-    'phone_number': [fake.numerify('(###) ###-####') for _ in range(num_rows)]  # US phone numbers
+    'phone_number': [fake.numerify('(###) ###-####') for _ in range(num_rows)],  # US phone numbers
+    'room_temp' : [random.randint(65, 81) for _ in range(num_rows)],
+    'self_cleanliness' : [random.randint(0,11) for _ in range(num_rows)],
+    'self_guest' : [random.randint(0,11) for _ in range(num_rows)],
+    'self_loud' : [random.randint(0,11) for _ in range(num_rows)],
+    'roommate_interaction' : [random.randint(0,11) for _ in range(num_rows)],
+    'self_sleep' : [random.choice(['Before 8', '8-10', '10-12', 'After midnight']) for _ in range(num_rows)],
+    'self_major' : [tamu_majors[random.randint(0,len(tamu_majors)-1)] for _ in range(num_rows)],
+    'roomie_sleep' : [random.choice(['Before 8', '8-10', '10-12', 'After midnight']) for _ in range(num_rows)],
+    'roomie_major' : [tamu_majors[random.randint(0,len(tamu_majors)-1)] for _ in range(num_rows)],
+    'roomie_age' : [random.randint(18, 25) for _ in range(num_rows)],
+    'roomie_cleanliness' : [random.randint(0,11) for _ in range(num_rows)],
+    'roomie_guest' : [random.randint(0,11) for _ in range(num_rows)],
+    'roomie_loud' : [random.randint(0,11) for _ in range(num_rows)],
+    'acceptance' : [random.choice(['True', 'False']) for _ in range(num_rows)]
 }
 
 # Populate the 'first_name' and 'last_name' fields based on gender
