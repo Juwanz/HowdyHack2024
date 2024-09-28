@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Matched Roommates</title>
+    <link rel="stylesheet" href="../static/styleMatches.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Matched Roommates</h1>
+        <ul class="roommate-list">
+            {% if roommates %}
+                {% for roommate in roommates %}
+                    <li class="roommate-card">
+                        <h2>{{ roommate.username }}</h2>
+                        <!-- You can add more details like age, bio, etc. if they are in the User model -->
+                        <p>Roommate ID: {{ roommate.id }}</p>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>No matches found.</p>
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>
