@@ -6,6 +6,7 @@ nav {
     left: 0 !important; /* Align to the left side */
     width: 100% !important; /* Ensure it takes the full width of the screen */
     z-index: 1000 !important; /* Keep the navbar above other content */
+    font-family: Arial, sans-serif !important;
 }
 
 .container {
