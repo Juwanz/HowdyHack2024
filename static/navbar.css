@@ -1,38 +1,36 @@
 nav {
-    background-color: #333;
-    padding: 1em;
-    position: fixed; /* Fixed position to keep it at the top */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensure it takes the full width */
-    z-index: 1000; /* Ensures it stays above other content */
-    background-color: #333; /* Background color for the navbar */
-    padding: 1em; /* Padding around the navbar */
+    background-color: #333 !important; /* Background color for the navbar */
+    padding: 1em !important; /* Padding around the navbar */
+    position: fixed !important; /* Fixed position to keep it at the top */
+    top: 0 !important; /* Align to the top of the page */
+    left: 0 !important; /* Align to the left side */
+    width: 100% !important; /* Ensure it takes the full width of the screen */
+    z-index: 1000 !important; /* Keep the navbar above other content */
 }
 
 .container {
-    padding-top: 60px; /* Adjust this value based on the navbar height */
+    padding-top: 60px !important; /* Adjust the top padding to prevent content from overlapping the navbar */
 }
 
 nav ul {
-    list-style-type: none; /* Remove bullet points from the list */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow: hidden; /* Clear floats */
+    list-style-type: none !important; /* Remove bullet points from the list */
+    margin: 0 !important; /* Remove default margin */
+    padding: 0 !important; /* Remove default padding */
+    overflow: hidden !important; /* Ensure the list items don't overflow */
 }
 
 nav ul li {
-    float: left; /* Align list items horizontally */
-    margin-right: 15px; /* Space between list items */
+    float: left !important; /* Align list items horizontally */
+    margin-right: 15px !important; /* Add space between list items */
 }
 
 nav ul li a {
-    color: white; /* Text color for links */
-    text-decoration: none; /* Remove underline from links */
-    padding: 14px 20px; /* Padding around the links */
-    display: block; /* Make the entire area of the link clickable */
+    color: white !important; /* Set the text color for links */
+    text-decoration: none !important; /* Remove underline from links */
+    padding: 14px 20px !important; /* Add padding around the links */
+    display: block !important; /* Ensure the entire link area is clickable */
 }
 
 nav ul li a:hover {
-    background-color: #111; /* Change background color on hover */
+    background-color: #111 !important; /* Change the background color when hovering over a link */
 }
