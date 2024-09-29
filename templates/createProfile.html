@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Page</title>
-    <link rel="stylesheet" href="../static/styleCreateProfile.css">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <div class="survey-container">
         <h1>Create Your Profile</h1>
         <form action="submit-survey" method="post">
@@ -249,5 +243,8 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
+
+{% block css_file %}
+    styleCreateProfile.css
+{% endblock %}
