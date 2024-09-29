@@ -65,11 +65,6 @@ html, body {
   z-index: 2;
 }
 
-.card:hover .additional { /* hover and the animation goes this far */
-  width: 100%;
-  border-radius: 0 5px 5px 0;
-}
-
 .card .additional .user-card { /* the circle thing*/
   width: 300px;
   height: 100%;
@@ -77,50 +72,9 @@ html, body {
   float: right;
 }
 
-.card .additional .user-card::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  right: -2px;
-  height: 80%;
-  border-left: 2px solid rgba(0,0,0,0.025);*/
-}
-
-
 .card .additional .user-card svg {
   top: 50%;
 }
-
-.card .additional .more-info {
-  width: 530px; /*the size of invisible textbox*/
-  float: left;
-  position: absolute;
-  left: 150px;
-  height: 100%;
-}
-
-.card .additional .more-info h1 {
-  margin: 0 1rem 0 10rem; /* Top, Right, Bottom, Left */
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.card .additional .coords {
-    
-  margin: 0 0 0 10rem; /* Top, Right, Bottom, Left */
-  color: #fff;
-  font-size: 1rem;
-  float: right;
-
-}
-
-.card .additional .coords span + span {
-    margin: 0 0 0 10rem; /* Top, Right, Bottom, Left */
-    font-size: 1rem;
-  float: right;
-}
-
 
 .card .general {
   width: 300px;
@@ -139,4 +93,31 @@ html, body {
   bottom: 1rem;
   right: 1rem;
   font-size: 0.9em;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: 'Sriracha', sans-serif;  /* You can use your preferred Google Font */
+  font-size: 16px;
+  color: #fff;
+  background-color: #500000; /* Button background color */
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #5a6268; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight upward lift on hover */
+}
+
+.back-button:active {
+  transform: translateY(0); /* Remove lift when clicking */
+}
+
+.back-button i {
+  margin-right: 8px; /* Space between icon and text */
 }

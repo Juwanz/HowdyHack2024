@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/profileCardStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Reveal Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .card {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .card-content {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+        .card p {
+            margin: 0;
+            color: #666;
+        }
+        .stats {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 75%;
+            height: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover .stats {
+            transform: translateX(0);
+        }
+        .stats h3 {
+            margin: 0 0 15px;
+            font-size: 20px;
+        }
+.stats ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .stats li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h2>Hover Me</h2>
+            <p>Move your mouse over to reveal stats</p>
+        </div>
+        <div class="stats">
+            <h3>Stats</h3>
+            <ul>
+                <li>Strength: 85</li>
+                <li>Agility: 92</li>
+                <li>Intelligence: 78</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
