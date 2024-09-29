@@ -1,0 +1,38 @@
+nav {
+    background-color: #333;
+    padding: 1em;
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it takes the full width */
+    z-index: 1000; /* Ensures it stays above other content */
+    background-color: #333; /* Background color for the navbar */
+    padding: 1em; /* Padding around the navbar */
+}
+
+.container {
+    padding-top: 60px; /* Adjust this value based on the navbar height */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Clear floats */
+}
+
+nav ul li {
+    float: left; /* Align list items horizontally */
+    margin-right: 15px; /* Space between list items */
+}
+
+nav ul li a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 14px 20px; /* Padding around the links */
+    display: block; /* Make the entire area of the link clickable */
+}
+
+nav ul li a:hover {
+    background-color: #111; /* Change background color on hover */
+}

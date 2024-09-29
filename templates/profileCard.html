@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends 'base.html' %}
 
-<a href="javascript:history.back()" class="back-button">
-  <i class="fa fa-arrow-left"></i> Back
-</a>
-
-<link rel="stylesheet" href="../static/profileCardStyle.css">
+{% block content %}
 
 <div class="center">
 
@@ -56,3 +51,8 @@
   
   
   </div>
+{% endblock %}
+
+{% block css_file %}
+    profileCardStyle.css
+{% endblock %}

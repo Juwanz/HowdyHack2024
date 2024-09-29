@@ -8,6 +8,8 @@ body {
   background: #CCFBFE;
   overflow: hidden;
   font-family: sans-serif;
+  overflow-y: auto;
+  padding-top: 100px;
 }
 
 .tinder {
