@@ -64,7 +64,7 @@
             <!-- Question for selecting an age using feed back, use min to require it to be positive-->
             <div class="form-group">
                 <label for="age">What age would you like your ideal roommate to be?</label>
-                <textarea id="age" name="age" rows="1" placeholder="Enter an age!" min="1"></textarea>
+                <textarea id="age" name="age" rows="1" placeholder="Enter an age!" min="0"></textarea>
             </div>
 
             <!-- Question for slider for cleanliness of roommate.-->
@@ -77,7 +77,7 @@
                 </div>
         
                 <!-- Slider input -->
-                <input type="range" id="cleanliness" name="cleanliness" min="1" max="10" value="5" oninput="updateCleanValue(this.value)">
+                <input type="range" id="cleanliness" name="cleanliness" min="0" max="10" value="5" oninput="updateCleanValue(this.value)">
                 
                 <!-- Display the current slider value -->
                 <p>Cleanliness Level: <span id="cleanliness-value">5</span></p>
@@ -100,7 +100,7 @@
                 </div>
         
                 <!-- Slider input -->
-                <input type="range" id="guest" name="guest" min="1" max="10" value="5" oninput="updateGuestValue(this.value)">
+                <input type="range" id="guest" name="guest" min="0" max="10" value="5" oninput="updateGuestValue(this.value)">
                 
                 <!-- Display the current slider value -->
                 <p>Guest Frequency: <span id="guest-value">5</span></p>
@@ -122,7 +122,7 @@
                 </div>
         
                 <!-- Slider input -->
-                <input type="range" id="guest" name="guest" min="1" max="10" value="5" oninput="updateLoudValue(this.value)">
+                <input type="range" id="guest" name="guest" min="0" max="10" value="5" oninput="updateLoudValue(this.value)">
                 
                 <!-- Display the current slider value -->
                 <p>Roommate Loudness: <span id="loud-value">5</span></p>

@@ -15,34 +15,234 @@
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
 
+             <!-- Question for gender preference -->
+             <div class="form-group">
+                <label for="gender_rating">What is your gender?</label>
+                <div class="rating-options">
+                    <label><input type="radio" name="gender_rating" value="1"> Male</label>
+                    <label><input type="radio" name="gender_rating" value="2"> Female</label>
+                    <label><input type="radio" name="gender_rating" value="3"> Prefer not to say</label>
+                    <label><input type="radio" name="gender_rating" value="4"> Other</label>
+                </div>
+            </div>
+
+            <!-- Question for city using a free response -->
+            <div class="form-group">
+                <label for="town">What is your hometown </label>
+                <input type="text" id="town" name="town" placeholder="Enter a city" required>
+            </div>
+
+            <!-- Question for state using a dropdown -->
+            <div class="form-group">
+                <label>What state are your from?</label>
+                <select id="subscribe" name="subscribe">
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>                
+                </select>
+            </div>
+
+            <!-- Question for major using a dropdown -->
+            <div class="form-group">
+                <label>What department are you from?</label>
+                <select id="subscribe" name="subscribe">
+                    <option value="College of Agriculture and Life Sciences">College of Agriculture and Life Sciences</option>
+                    <option value="College of Architecture">College of Architecture</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="Mays Business School">Mays Business School</option>
+                    <option value="College of Education and Human Development">College of Education and Human Development</option>
+                    <option value="College of Engineering">College of Engineering</option>
+                    <option value="College of Geosciences">College of Geosciences</option>
+                    <option value="College of Liberal Arts">College of Liberal Arts</option>
+                    <option value="College of Science">College of Science</option>
+                    <option value="School of Public Health">School of Public Health</option>
+                    <option value="College of Veterinary Medicine and Biomedical Sciences">College of Veterinary Medicine and Biomedical Sciences</option>
+                </select>
+            </div>
+
+            <!-- Question for selecting an age using feed back, use min to require it to be positive-->
+            <div class="form-group">
+                <label for="age">What is your age?</label>
+                <textarea id="age" name="age" rows="1" placeholder="Enter an age!" min="0"></textarea>
+            </div>
+
+            <!-- Question for getting a phone number -->
+            <div class="form-group">
+                <label for="phone">What is your phone number so that people can contact you?</label>
+                <textarea id="phone" name="phone" rows="1" placeholder="XX-XXX-XXXX"></textarea>
+            </div>
+
+            <!-- Question for getting the email -->
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
 
+            <!-- Question for getting the short bio -->
             <div class="form-group">
-                <label for="rating">How satisfied are you with our service?</label>
+                <label for="bio">Please enter a short bio! Feel free to describe yourself and add any interests/hobbies you may have:</label>
+                <textarea id="bio" name="bio" rows="5" placeholder="Type a short bio!"></textarea>
+            </div>
+
+            <!-- Question for sleep preference -->
+            <div class="form-group">
+                <label for="sleep_rating">What time do you normally sleep?</label>
                 <div class="rating-options">
-                    <label><input type="radio" name="rating" value="1"> 1</label>
-                    <label><input type="radio" name="rating" value="2"> 2</label>
-                    <label><input type="radio" name="rating" value="3"> 3</label>
-                    <label><input type="radio" name="rating" value="4"> 4</label>
-                    <label><input type="radio" name="rating" value="5" required> 5</label>
+                    <label><input type="radio" name="sleep_rating" value="1"> Before 8pm</label>
+                    <label><input type="radio" name="sleep_rating" value="2"> Between 8 to 10pm</label>
+                    <label><input type="radio" name="sleep_rating" value="3"> Between 10 to 12pm</label>
+                    <label><input type="radio" name="sleep_rating" value="4"> After midnight</label>
                 </div>
             </div>
 
+            <!-- Question for entering the temperature -->
             <div class="form-group">
-                <label for="feedback">Additional Feedback:</label>
-                <textarea id="feedback" name="feedback" rows="4" placeholder="Share your feedback"></textarea>
+                <label for="temp">What do you set your room temperature to?</label>
+                <input type="text" id="temp" name="temp" placeholder="__°F" required>
             </div>
 
-            <div class="form-group">
-                <label for="subscribe">Would you like to receive updates?</label>
-                <select id="subscribe" name="subscribe">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
+            <!-- Question for slider for cleanliness for self user-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="cleanliness">How clean do you keep your room?</label>
+                <div class="slider-labels">
+                    <span>Very Messy</span>
+                    <span>Very Clean</span>
+                </div>
+                <!-- Slider input -->
+                <input type="range" id="cleanliness" name="cleanliness" min="0" max="10" value="5" oninput="updateCleanValue(this.value)">
+                <!-- Display the current slider value -->
+                <p>Cleanliness Level: <span id="cleanliness-value">5</span></p>
             </div>
+            <script>
+                function updateCleanValue(value) {
+                    document.getElementById('cleanliness-value').textContent = value;
+                }
+            </script>
+
+            <!-- Question for slider for guest frequency for self user-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="guest">How often do you have guests over?</label>
+                <div class="slider-labels">
+                    <span>Never</span>
+                    <span>Very Often</span>
+                </div>
+                <!-- Slider input -->
+                <input type="range" id="guest" name="guest" min="0" max="10" value="5" oninput="updateGuestValue(this.value)">
+                <!-- Display the current slider value -->
+                <p>Guest Frequency: <span id="guest_frequency">5</span></p>
+            </div>
+            <script>
+                function updateGuestValue(value) {
+                    document.getElementById('guest_frequency').textContent = value;
+                }
+            </script>
+
+            <!-- Question for slider for loudness for self user-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="loud">How loud would you say you are?</label>
+                <div class="slider-labels">
+                    <span>Enjoys Silence</span>
+                    <span>Enjoys Music and Noise</span>
+                </div>
+                <!-- Slider input -->
+                <input type="range" id="loud" name="loud" min="0" max="10" value="5" oninput="updateLoudValue(this.value)">
+                <!-- Display the current slider value -->
+                <p>Loudness Rating: <span id="loud_attribute">5</span></p>
+            </div>
+            <script>
+                function updateLoudValue(value) {
+                    document.getElementById('loud_attribute').textContent = value;
+                }
+            </script>
+
+            <!-- Question for slider for loudness for self user-->
+            <div class="slider-container">
+                <link rel="stylesheet" href="../static/styleslider.css">
+                <label for="interact">How much do you want to interact with your roommate?</label>
+                <div class="slider-labels">
+                    <span>Strangers</span>
+                    <span>Roomie BFFs</span>
+                </div>
+                <!-- Slider input -->
+                <input type="range" id="interact" name="interact" min="0" max="10" value="5" oninput="updateInteractValue(this.value)">
+                <!-- Display the current slider value -->
+                <p>Roommate Interaction: <span id="interact_attribute">5</span></p>
+            </div>
+            <script>
+                function updateInteractValue(value) {
+                    document.getElementById('interact_attribute').textContent = value;
+                }
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <div class="form-group">
                 <button type="submit" class="submit-button">Submit Survey</button>

@@ -18,7 +18,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 1000px;
     width: 100%;
     border: 2px solid #800000; /* Maroon Border */
 }
@@ -28,6 +28,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #800000; /* Maroon Heading */
+    padding-top: 1700px;
 }
 
 .form-group {
