@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 0px; /* Add padding to the top */
 }
 
 body {
@@ -11,8 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    padding-top:425px;
+    height: 100vh;
+    padding-top: 225px;
 }
 
 .survey-container {
@@ -30,7 +29,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #800000; /* Maroon Heading */
-    padding-top: 900px;
+    padding-top: 1700px;
 }
 
 .form-group {
@@ -44,9 +43,9 @@ label {
     color: #800000; /* Maroon Labels */
 }
 
-input[type="text"], 
-input[type="email"], 
-textarea, 
+input[type="text"],
+input[type="email"],
+textarea,
 select {
     width: 100%;
     padding: 10px;
@@ -88,11 +87,10 @@ input[type="radio"] {
     background-color: #d32f2f; /* Pinkish Maroon Hover */
 }
 
-input[type="text"]:focus, 
-input[type="email"]:focus, 
-textarea:focus, 
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
 select:focus {
     outline: none;
     border-color: #800000; /* Maroon Focus Border */
 }
-
