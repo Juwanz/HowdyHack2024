@@ -1,33 +1,18 @@
-<!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
-    <link rel="stylesheet" href="../static/stylelogin.css">
-    <!-- Fontawesome CDN Link -->
+{% extends 'base.html' %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   </head>
-<body>
-  <div class="container">
-    <img src="../static/logo.PNG" alt="Top Image" class="top-image">
+{% block content %}
+<div class="container">
+    <img src="{{ url_for('static', filename='logo.PNG') }}" alt="Top Image" class="top-image">
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
-        <img src="../static/logo.jpg" alt="">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="">
         <div class="text">
           <span class="text-1">Match with a roomie!</span>
         </div>
       </div>
       <div class="back">
-        <img class="backImg" src="/static/logo.jpg" alt="">
+        <img class="backImg" src="{{ url_for('static', filename='logo.jpg') }}" alt="">
         <div class="text">
           <span class="text-1">Meet your future roomie!</span>
         </div>
@@ -81,5 +66,8 @@
     </div>
     </div>
   </div>
-</body>
-</html>
+{% endblock %}
+
+{% block css_file %}
+    stylelogin.css
+{% endblock %}

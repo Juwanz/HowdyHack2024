@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Roommate Preferences</title>
-    <link rel="stylesheet" href="../static/styleRoommatePref.css">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
     <div class="survey-container">
         <h1> Your Roommate Preferences </h1>
         <form action="submit-survey" method="post">
@@ -48,8 +42,6 @@
                 <select id="subscribe" name="subscribe">
                     <option value="College of Agriculture and Life Sciences">College of Agriculture and Life Sciences</option>
                     <option value="College of Architecture">College of Architecture</option>
-                    <option value="Mays Business School">Mays Business School</option>
-                    <option value="Mays Business School">Mays Business School</option>
                     <option value="Mays Business School">Mays Business School</option>
                     <option value="College of Education and Human Development">College of Education and Human Development</option>
                     <option value="College of Engineering">College of Engineering</option>
@@ -139,5 +131,9 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+
+{% endblock %}
+
+{% block css_file %}
+    styleRoommatePref.css
+{% endblock %}

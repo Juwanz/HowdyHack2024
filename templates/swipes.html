@@ -1,64 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinder Swipe Cards</title>
-    <link rel="stylesheet" href="../static/swipesStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Add some basic styles for the Tinder cards */
-        .tinder {
-            position: relative;
-            width: 300px;
-            margin: 50px auto;
-        }
-        .tinder--status {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .tinder--cards {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-        .tinder--card {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .tinder--card img {
-            width: 100%;
-            height: auto;
-        }
-        .tinder--buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .tinder--buttons button {
-            width: 50px;
-            height: 50px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Add some basic styles for the Tinder cards */
+    .tinder {
+        position: relative;
+        width: 300px;
+        margin: 50px auto;
+    }
+    .tinder--status {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .tinder--cards {
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+    .tinder--card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tinder--card img {
+        width: 100%;
+        height: auto;
+    }
+    .tinder--buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tinder--buttons button {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+</style>
 
 <div class="tinder">
     <div class="tinder--status">
@@ -201,5 +194,8 @@
     love.addEventListener('click', loveListener);
 </script>
 
-</body>
-</html>
+{% endblock %}
+
+{% block css_file %}
+    swipesStyle.css
+{% endblock %}
